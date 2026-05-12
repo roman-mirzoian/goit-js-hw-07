@@ -15,13 +15,85 @@ body {
   line-height: 1.5;
 }
 
-/* Task 2 — gallery */
+/* ── Global inputs ──────────────────────────────────────── */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+  height: 40px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 0 12px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  background: #fff;
+}
+
+input[type='text']:hover,
+input[type='email']:hover,
+input[type='password']:hover,
+input[type='number']:hover {
+  border-color: #000;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='number']:focus {
+  border-color: #000;
+}
+
+/* ── Task 1 — category list ─────────────────────────────── */
+#categories {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+  max-width: 440px;
+}
+
+#categories .item {
+  background: #f6f6fe;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#categories .item h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#categories .item > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#categories .item > ul > li {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* ── Task 2 — gallery ───────────────────────────────────── */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   list-style: none;
-  padding: 16px;
 }
 
 .gallery li {
@@ -36,11 +108,132 @@ body {
   border-radius: 4px;
 }
 
-/* Task 6 — boxes */
+/* ── Task 3 — text field ────────────────────────────────── */
+#name-input {
+  display: block;
+  width: 360px;
+  margin-bottom: 16px;
+}
+
+/* ── Task 4 — login form ────────────────────────────────── */
+.login-form {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+}
+
+.login-form input {
+  width: 360px;
+}
+
+.login-form button[type='submit'] {
+  align-self: flex-start;
+  height: 40px;
+  background: #4e75ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.login-form button[type='submit']:hover {
+  background: #6c8cff;
+}
+
+/* ── Task 5 — color widget ──────────────────────────────── */
+.widget {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 48px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.change-color {
+  height: 40px;
+  background: #4e75ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.change-color:hover {
+  background: #6c8cff;
+}
+
+/* ── Task 6 — box script ────────────────────────────────── */
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#controls input[type='number'] {
+  width: 80px;
+}
+
+[data-create] {
+  height: 40px;
+  background: #4e75ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+[data-create]:hover {
+  background: #6c8cff;
+}
+
+[data-destroy] {
+  height: 40px;
+  background: #ff4e4e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+[data-destroy]:hover {
+  background: #ff7070;
+}
+
 #boxes {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 16px;
   align-items: flex-end;
+  background: #fff;
+  padding: 16px;
+  min-height: 60px;
+  border-radius: 0 0 8px 8px;
 }
